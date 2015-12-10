@@ -1,60 +1,10 @@
-/*#include <iostream>
-#include <cctype>
-
-#ifndef _STACK_H
-#define _STACK_H
-#include "Stack.h"
-*/
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <stdio.h>
 using namespace std;
-/*
-#define BUF_SIZE (sizeof(unsigned long))
 
-class Pretook{
-public:
-	virtual void foo()=0;
-	virtual void see_what()=0;
-};
-
-class Took:public Pretook{
-public:
-	void foo();
-	void see_what();
-};
-
-void Took::see_what(){
-	cout<<"hello beach\n";
-	return;
-}
-
-void Took::foo(){}
-
-
-/*
-template<typename T>
-class Foo{
-public:
-	Foo();
-	~Foo();
-	void took();
-};
-template<typename T>
-void Foo<T>::took(){
-	cout<<"asd\n";
-	return;
-}
-
-
-
-void correct(Pretook& object){
-	object.see_what();
-	return;
-}
-*/
 class CsvKey{
 public:
 	CsvKey(){};
@@ -75,7 +25,7 @@ public:
 }
 
 	void SortVector(vector<vector<string>> &vec){
-	//сортировка
+
 	//sorting result in vectors
 	vector<string> tempvec,tempvec2;	
 	for(int i=1;i<vec.size();++i){		
@@ -119,17 +69,7 @@ public:
 };
 
 int main(){
-/*		countsum();
-	Stack<int> ob(10);
-	ob.See();	
-	Took ob;
 
-	correct(ob);
-unsigned char a[BUF_SIZE];
-unsigned long b = sizeof(a) / sizeof(a[0]);
-cout<<b;
-	system("pause");
-	return 0;*/
 	CsvKey ob;
 	ifstream firstfile("input_A.csv");
 	ifstream secondfile("input_B.csv");
@@ -147,6 +87,3 @@ cout<<b;
 	ob.DoResult(thirdfile,vec,vec2);
 	thirdfile.close();
 	}
-
-
-//#endif // !_STACK_H
